@@ -52,6 +52,9 @@ const App = () => {
       ...prev,
       items: prev.items.filter((item) => item.id !== targetItemId),
     }));
+    setDisplayedFolderItems((prev) =>
+      prev.filter((item) => item.id !== targetItemId)
+    );
     setSelectedFolderItemsIds((prev) => [
       ...prev.filter((itemId) => itemId !== targetItemId),
     ]);
